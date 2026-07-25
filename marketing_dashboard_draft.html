@@ -4,16 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SOL SPA Marketing Cost Dashboard</title>
+
 <style>
-:root{--bg:#06111f;--card:#0f1f33;--muted:#8fa5bf;--text:#f8fafc;--line:#20364f;--blue:#0047ab;--yellow:#f59e0b;--green:#22c55e;--red:#ef4444}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#12325a 0,#06111f 42%,#020817 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:22px}
-.header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:18px}h1{margin:0;font-size:28px;letter-spacing:-.03em}.sub{color:var(--muted);margin-top:6px}.badge{background:#0b2a4a;border:1px solid #1f5f99;color:#bfdbfe;border-radius:999px;padding:8px 12px;font-weight:800;white-space:nowrap}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:14px}.card{background:rgba(15,31,51,.92);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 16px 40px rgba(0,0,0,.25)}.label{color:var(--muted);font-size:13px;font-weight:700;text-transform:uppercase}.value{font-size:24px;font-weight:900;margin-top:6px}.small{font-size:13px;color:var(--muted);margin-top:4px}
-.filters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:14px}select,input{width:100%;background:#081827;color:var(--text);border:1px solid #24435f;border-radius:12px;padding:11px;font-size:14px}button{background:var(--blue);color:white;border:0;border-radius:12px;padding:11px;font-weight:900;cursor:pointer}
-.charts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}.bar-row{display:grid;grid-template-columns:130px 1fr 110px;gap:10px;align-items:center;margin:10px 0}.bar-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#dbeafe;font-weight:700}.bar-track{height:16px;background:#142842;border-radius:999px;overflow:hidden}.bar-fill{height:100%;background:linear-gradient(90deg,var(--blue),#38bdf8);border-radius:999px}.bar-val{text-align:right;color:#e2e8f0;font-weight:800;font-size:13px}
-.tablewrap{overflow:auto;max-height:62vh;border-radius:14px;border:1px solid var(--line)}table{width:100%;border-collapse:collapse;min-width:1100px}th,td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{position:sticky;top:0;background:#10233a;color:#bfdbfe;text-align:left;font-size:13px;z-index:1}td{font-size:14px;color:#e5eef9}tr:hover td{background:#0c1d31}.money{font-weight:900;color:#fde68a;text-align:right}.right{text-align:right}.footer{color:var(--muted);font-size:12px;margin-top:12px}
-@media(max-width:900px){body{padding:14px}.header{display:block}.grid,.filters,.charts{grid-template-columns:1fr}h1{font-size:24px}}
+    :root{--bg:#f8fafc;--card:#ffffff;--muted:#64748b;--text:#1e293b;--line:#e2e8f0;--blue:#0047ab;--yellow:#f59e0b;--green:#22c55e;--red:#ef4444}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:22px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+    .label{color:var(--muted);font-size:13px;font-weight:700;text-transform:uppercase}
+    .value{font-size:24px;font-weight:900;margin-top:6px;color:var(--blue)}
+    table{width:100%;border-collapse:collapse;min-width:1100px}
+    th{background:#f1f5f9;color:var(--text);padding:11px 10px;text-align:left;font-size:13px;border-bottom:2px solid var(--line)}
+    td{padding:11px 10px;border-bottom:1px solid var(--line);font-size:14px}
+    .money{font-weight:900;color:var(--blue);text-align:right}
+    .bar-fill{background:linear-gradient(90deg,var(--blue),#3b82f6)}
+    button{background:var(--blue);color:white;border:0;border-radius:8px;padding:10px 20px;font-weight:700;cursor:pointer}
+    .badge{background:#e0e7ff;color:var(--blue);border-radius:999px;padding:6px 12px;font-weight:800}
 </style>
+
 </head>
 <body>
 <div class="header"><div><h1>SOL SPA Marketing Cost Dashboard</h1><div class="sub">Chi phí Marketing · filter theo tháng, loại chi phí, chi nhánh, tình trạng</div></div><div class="badge">Updated 25/07/2026 15:32</div></div>
